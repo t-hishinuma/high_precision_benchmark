@@ -36,10 +36,12 @@ mpf_class mpf_dot(const size_t N, size_t prec){
 	mpf_class ret = 0.0;
 	std::vector<mpf_class> x(N);
 	std::vector<mpf_class> y(N);
+	mpf_class a(1.0);
+	mpf_class b(3.0);
 
 	for(size_t i = 0; i < N; i++){
-		x[i] = 1.0/3.0;
-		y[i] = 1.0/3.0;
+		x[i] = a/b;
+		y[i] = a/b;
 	}
 
 	auto start = std::chrono::system_clock::now();
